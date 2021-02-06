@@ -1,6 +1,8 @@
 # docker-tensorflow-l4t
 A repository to build a tensorflow C++ container for L4T platforms
 
+Used to build the docker container at https://hub.docker.com/repository/docker/baicontainers/l4t-tensorflow-cc
+
 # Instructions
 
 Download the zip file from https://hub.docker.com/repository/docker/baicontainers/l4t-tensorflow-cc to this directory.
