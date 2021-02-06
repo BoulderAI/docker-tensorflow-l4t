@@ -37,14 +37,10 @@ sudo chmod +x bazel
 sudo cp ./bazel /usr/local/bin
 rm ./bazel
 
-git clone https://github.com/BoulderAI/tensorflow.git &&
-\
+git clone https://github.com/BoulderAI/tensorflow.git && \
 cd tensorflow && \
 git checkout r1.15-jp4.4 && \
 ./configure
-# For configuration step here use cuda = y and cuda
-compute 6.2
-bazel build --config=v1 --config=nonccl
---local_resources 2048,0.5,1.0 --verbose_failures
-//tensorflow:libtensorflow_cc.so
+# For configuration step here use cuda = y and cuda compute 6.2
+bazel build --config=v1 --config=nonccl --local_resources 2048,0.5,1.0 --verbose_failures //tensorflow:libtensorflow_cc.so
 ```
